@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>객체</h1>
+	
+	<script type="text/javascript">
+		
+		//GuestBookVo guestbookVo = new GuestBookVo();
+		
+		var guestbookVo = {
+				name: "서웅기", 
+				password:"1234", 
+				content:"안녕하세요", 
+				regDate:"2021-02-04",
+				showInfo: function(){
+					console.log(this.name+", "+this.password+", "+this.content+", "+this.regDate)
+				}			
+		};
+		
+		console.log(guestbookVo.name);
+		console.log(guestbookVo.password);
+		console.log(guestbookVo.content);
+		console.log(guestbookVo.regDate);
+		guestbookVo.showInfo();
+		console.log(guestbookVo);
+		console.log("========================");
+		
+		//person관리 배열
+		var personList = [];
+		
+		var person01 = {
+			name: "정우성",
+			hp: "010-1111-1111"
+				
+		};
+		console.log(person01);
+		
+		
+		var person02 ={};
+		person02.name = "유재석";
+		person02.hp = "010-2222-2222";
+		console.log(person02);
+		
+		
+		var person03 = {
+				name:"이효리"
+		};
+		person03.hp = "010-3333-3333";
+		console.log(person03);
+		
+		// personList = [person01,person02,person03];
+		personList.push(person01);
+		personList.push(person02);
+		personList.push(person03);
+		
+		console.log(personList);
+		
+		//전체이름만  출력
+		for(var i=0; i<personList.length; i++){
+			console.log(personList[i].name);
+		};
+		
+		
+		
+		
+		
+	</script>
+	
+
+	
+</body>
+</html>

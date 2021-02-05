@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id ="header">이벤트</h1>
+	
+	<h2>태그1</h2>
+	<h2>태그2</h2>
+	<h2>태그3</h2>
+	<!-- ~~할때 작동해라-->
+	
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	<h3 class="tagh3">h3태그_3</h3>
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+		
+	</div>
+	<p id="display">
+		
+	</p>
+	
+	<p id= display2>
+	</p>
+	<script type="text/javascript">
+		//window.onload 이미 정의되어있는 기능. 
+		window.onload = function(){
+			var testButton = document.getElementById("btn");
+			var textArea = document.getElementById("display");
+			var h1 = document.getElementById("header");
+			console.log(testButton);
+			console.log(display);
+			console.log(header);
+			
+			//tag h2
+		
+			var tagArray = document.getElementsByTagName("h2");
+			console.log(tagArray);
+			
+			//class h3
+			var tag3Array = document.getElementsByClassName("tagh3");
+			var textArea2 = document.getElementById("display2");
+			console.log(tag3Array);
+			
+			//.onclick 이미 정의 되어있는 기능. 클릭이 되면 작동된다.
+			testButton.onclick = function(){
+				console.log("버튼 클릭");
+				textArea.innerHTML = "<font color='#ff0000'>클릭 완료!</font>";
+			};
+			
+			h1.onclick = function(){
+				console.log("버튼 클릭");
+				h1.innerHTML = "<font color='#00ff00'>클릭이 되려나?</font>";
+			};
+			
+			//h2태그 클릭했을때
+			tagArray[0].onclick = function(){
+				console.log("h2태그_1");
+				textArea.innerHTML="<font color='#00ff00'>h2태그_1</font>";
+				
+			};
+			
+			tagArray[1].onclick = function(){
+				console.log("h2태그_2");
+				textArea.innerHTML = "<font color='#0000ff'>h2태그2</font>";
+			};
+			
+			tagArray[2].onclick = function(){
+				console.log("h2태그_3");
+				textArea.innerHTML = "<font color='#f00fff'>h2태그3</font>";
+			};
+			
+			tag3Array[0].onclick = function(){
+				console.log("h3태그")
+				display2.innerHTML="<font color='#f0f0f0'>h3태그</font>";
+			}
+			
+			tag3Array[1].onclick = function(){
+				console.log("h3태그")
+				textArea2.innerHTML="<font color='#f000f0'>h3태그</font>";
+			}
+			
+			tag3Array[2].onclick = function(){
+				console.log("h3태그")
+				textArea2.innerHTML="<font color='#ffff0'>h3태그</font>";
+			}
+			
+			
+		};
+		
+	
+	
+	
+	
+	</script>
+	
+	
+	
+	
+</body>
+</html>

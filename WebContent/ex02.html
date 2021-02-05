@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트 변수</h1>
+</body>
+<script type="text/javascript">
+	/* 변수 선언법 
+		자료형을 쓰지 않는다
+	*/
+	var num;
+	console.log("변수 선언");
+	var no =3; // number no =3; 이런식으로 선언 x
+	var str = "안녕하세요"; // string str;
+	var result = 3>5;// boolean result;
+	
+	console.log(no);
+	console.log(str);
+	console.log(result);
+
+	num = 1234;
+	console.log(num);
+</script>
+
+<script type="text/javascript">
+	/* 변수 이름이 같을때 */
+	var person = "정우성";
+	person = "이효리";
+	console.log(person);
+	console.log(person);
+	
+	var person01 = "정우성";
+	var person01 = "이효리";
+	var person01 = "유재석"; //같은 변수 사용 가능. 마지막 변수가 선언됨. 정신차리고 써야함
+	console.log(person01);
+</script>
+
+<script type="text/javascript">
+	/* 대입시 자료형이 결정된다  */
+	
+	/* 자료형 number string boolean --> 변수 선언시 표기하지 않는다 */
+	var data;
+	console.log(typeof data); //undefined
+	
+	data = 15;
+	console.log(typeof data); //number
+	
+	data = "안녕하세요"
+	console.log(typeof data); //string	
+	
+	data = true;
+	console.log(typeof data); //boolean
+</script>
+
+<script type="text/javascript">
+	/* null undefined 비교  */
+	var myVar01;
+	var myVar02 = null;
+	
+	console.log(myVar01); //null
+	console.log(myVar02); //undefined
+	
+	
+</script>
+
+<script type="text/javascript">
+	/* ==    === 비교 (일치 연산자)*/
+	console.log("123" == 123); //true
+	console.log("123"===123); //false 
+	
+	console.log(myVar01 == myVar02); //true, null undefined
+	console.log(myVar01 === myVar02); //false
+	
+	console.log("------------------");
+	console.log('' == false); //true
+	console.log('' === false); //false
+	console.log(''==0); //true
+	console.log(''===0); //false
+	console.log(0==false); //true
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>함수</h1>
+	
+	
+	<script type="text/javascript">
+		/* 기명 함수표현식(이름 있는 함수, 선언적 함수)  함수정의 부분이 가장먼저 해석된다. */
+		//함수의 정의
+		function plus(a, b){
+			var sum = a+b;
+			return sum;
+		}
+		
+		//사용법
+		var plusSum = plus(3,5);
+		console.log(plusSum);
+	
+		var result = plus(1000,2000);
+		console.log(result);
+	
+		var result01 = plus("안녕", "하세요");
+		console.log(result01);
+		
+		/* 익명 함수표현식(이름 없는 함수)-->순서대로 해석된다.
+			이름이 없어서 바로 사용해야함 --> 2번이상 사용 안됨.
+			2번이상 사용할려면 변수에 넣어두고 사용
+		*/
+		
+		//함수정의
+		var minus = function(a,b){
+			return a-b;		
+		}
+		
+		var result03 = minus(5,2);	
+		console.log(result03);
+		
+		var result04 = minus(5,5);
+		console.log(result04);
+		
+		
+		
+		
+		
+		
+		/* 변수 number string boolean null function  */	
+	</script>
+</body>
+</html>
