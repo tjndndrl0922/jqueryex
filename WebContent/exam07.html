@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡<br /> abcdefg </p>
+</body>
+<script type="text/javascript">
+	/* 
+	$("#p1").text("<strong>가나다라마바사</strong>"); //strong을 text로 인식
+	 */
+	 
+	 $("#p1").html("<strong>가나다라마바사</strong>"); //html이 섞여 있을시에 html로 사용
+	 var html = $("#p1").html(); //값 읽어오기 <strong>가나다라마바사</strong>
+	 console.log(html);
+	 
+	 var html = $("#p1").text(); //값 읽어오기 가바다라마바사
+	 console.log(html); 
+	
+	var str = $("#p2").text(); //값 읽어오기  학교종이 땡땡땡 abcdefg
+	console.log(str);
+</script>	
+
+</html>

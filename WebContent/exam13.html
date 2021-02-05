@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<input id="btn" type="button" VALUE="js테스트버튼" />
+		<h1 id="display">이름출력영역</h1>
+	</div>
+
+</body>
+<script type="text/javascript">
+	$("#btn").on("click", function(){
+		$("#display").html("서웅기");
+		$("#display").css("color","red");	
+		$("#display").prepend("홍길동");
+		$("#display").append("정우성");
+	});
+	
+	
+	
+</script>
+
+
+</html>
